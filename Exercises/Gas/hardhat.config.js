@@ -18,13 +18,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: {
-    compilers: [
-      {
-        version: "0.8.0",
-      },
-    ],
+    version: "0.8.17",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 500
+      }
+    }
   },
   gasReporter: {
     currency: "USD",
+    noColors: true
   },
 };
